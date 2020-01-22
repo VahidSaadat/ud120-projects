@@ -31,11 +31,11 @@ features_train, features_test, labels_train, labels_test = preprocess()
 clf = GaussianNB()
 train_time = time()
 clf.fit(features_train, labels_train)
-print "training time:", round(time()-train_time, 3), "s"
+print "training time:", round(time()-train_time, 3), "s"    # training time: 1.585 s
 pred_time = time()
 pred = clf.predict(features_test)
-print "prediction time:", round(time()-pred_time, 3), "s"
-print "accuracy score:", accuracy_score(labels_test, pred)
+print "prediction time:", round(time()-pred_time, 3), "s"   # prediction time: 0.296 s
+print "accuracy score:", accuracy_score(labels_test, pred)  # accuracy score: 0.9732650739476678
 #########################################################
 
 
